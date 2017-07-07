@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+	<title>Formatacao de campos</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/jquery_3.2.1_jquery.min.js"></script>
+	<script type="text/javascript" src="jQueryMaskPluginV1.7.6/jquery.mask.js"></script>
+</head>
+<body>
+
+<form action="index.html">
+			<label for="campoData">Data:</label>
+			<input type="text" id="campoData" maxlength="10"><br><br>
+
+			<label for="campoTelefone">Telefone:</label>
+			<input type="text" id="campoTelefone" maxlength="16"><br><br>
+
+			<!-- <label for="campoSenha">Senha alfanumérica:</label>
+			<input type="text" id="campoSenha" maxlength="9"><br><br> -->
+
+			<label for="campoCpf">CPF:</label>
+			<input type="text" class="campoCpf" maxlength="14"><br><br>
+
+			<label for="cep">CEP:</label>
+			<input type="text" class="cep" maxlength="9"><br><br>
+
+			<label>&nbsp;</label>
+			<input type="submit" value="enviar">
+</form>
+
+<script type="text/javascript">
+$(document).ready(
+		function($){
+			$("#campoData").mask("99/99/9999");
+			$("#campoTelefone").mask("(99) 999 999 999");
+			/*$("#campoSenha").mask("***-****");*/
+			$('.cep').mask('00000-000');
+			$('.phone_with_ddd').mask('(00) 0000-0000');
+		  $('.campoCpf').mask('000.000.000-00', {reverse: true});
+		});
+
+	</script>
+
+</body>
+</html>

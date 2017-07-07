@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Funções jQuery 2</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/aula19.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+	<!-- .show() .hide() .toggle() -->
+	<p>
+		Deseja responder nossa enquete?<br>
+	</p>
+	<button id="bot">Responder</button>
+
+	<div id="divFormulario">
+		Quantas horas de estudo você realiza por dia?
+		<form name="form1" action="#" method="get">
+			<input type="radio" name="escHoras" value="hora1">
+			Pelo menos 1 hora <br>
+			<input type="radio" name="escHoras" value="hora2">
+			Pelo menos 2 horas <br>
+			<input type="radio" name="escHoras" value="hora3">
+			Pelo menos 3 horas <br>
+			<input type="radio" name="escHoras" value="horaMais">
+			Mais de 3 horas <br>
+			<input type="submit" value="Enviar" name="botao">
+			<button id="voltar">Voltar</button>
+		</form>
+	</div>
+
+	<!-- .delay() -->
+	<!-- <button id="b1">Conteudo 1</button>
+	<button id="b2">Conteudo 2</button>
+
+	<div id="conteudo1">
+		<h2>Titulo1</h2>
+		<p>Texto para conteudo 1</p>
+	</div>
+	<div id="conteudo2">
+		<h2>Titulo2</h2>
+		<p>Texto para conteudo 2</p>
+	</div> -->
+
+	<!-- .fadeIn() .fadeOut() -->
+	<!-- <input type="button" name="bot1" value="Anterior">
+	<input type="button" name="bot2" value="Proximo"><br>
+	<img id="img1" src="imgs/img2.jpg">
+	<img id="img2" src="imgs/img3.jpg"> -->
+
+	<!-- .fadeTo() .val() -->
+	<!-- <div class="divLight">
+		Conteudo em texto na camada divLight
+	</div>
+	Opacidade:
+	<input type="text" name="opacidade" size="5">%<br>
+	<input type="button" name="bot" value="Alterar Opacidade"> -->
+
+	<!-- .fadeToggle() .hover() -->
+	<!-- <p>Qual a função básica do jQuery <a href="">Ver a resposta</a></p>
+	<p id="resposta">
+		jQuery foi criada para tornar mais simples a navegação <br>do documento HTML, a seleção de elementos DOM e <br>criar animações.
+	</p> -->
+
+	<!-- jQuery -->
+
+<script type="text/javascript">
+	ocult = true
+	$(document).ready(
+		function () {
+			$("#bot").click(
+				function () {
+					$("p").toggle("slow");
+					$("#divFormulario").toggle("slow");
+					if (ocult) {
+						document.getElementById('bot').innerHTML = 'Ocultar';
+						ocult = false
+					}else {
+						document.getElementById('bot').innerHTML = 'Responder';
+						ocult = true
+					}
+				}
+			);
+		}
+	);
+
+</script>
+
+</body>
+</html>
